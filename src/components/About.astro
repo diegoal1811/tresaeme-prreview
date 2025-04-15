@@ -1,0 +1,71 @@
+---
+import Elipsis from "./Elipsis.astro"
+---
+
+<section id="team" class="height: 100vh text-white">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-20">
+        <h1 style="" class="text-white mb-10 text-4xl font-extrabold leading-none tracking-tight md:text-4xl lg:text-5xl">
+            <Elipsis />
+            El equipo detrás de tu marca.
+        </h1>
+        <p style="" class="text-2xl font-normal">
+            En
+            <span class="font-bold"> TRESAEME </span>            
+            estamos orgullosos de contar con un equipo multidisciplinario que
+            combina investigación, estrategia y creatividad para ofrecerte solucniones
+            inteligentes en marketing digital y canales tradicionales.
+        </p>
+        
+    </div>
+    <div class="px-4 mx-auto max-w-screen-xl lg:py-2">
+        <section class="animate-breathing bg-gradient-to-bl from-gray-800/50 border border-gray-800/50 transition rounded-lg">
+            <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+                <div class="font-light text-white sm:text-lg ">
+                    <h2 class="mb-4 text-4xl tracking-tight font-semibold"> Crecer con estrategia, crecer con TRESAEME</h2>
+                    <div class="text-white text-xl">
+                        <p class="mb-4 text-lg">
+                            Transformamos tu marca en un activo estratégico. En TRESAEME, combinamos marketing inteligente, análisis y creatividad para que tu negocio no solo se vea bien, sino que genere resultados reales.
+                        </p>
+                        <p class="mb-4 text-lg">
+                            Aplicamos estrategias de marketing digital, branding y comunicación integral para impulsar el crecimiento sostenible de tu marca.
+                        </p>
+                        <p class="mb-4 text-lg">
+                            Nuestro enfoque basado en datos, tecnología e innovación optimiza cada campaña para maximizar rentabilidad y aumentar tus ventas.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mt-8">
+                    <img class="w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1">
+                    <img class="mt-4 w-full lg:mt-10 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" alt="office content 2">
+                </div>
+            </div>
+        </section>
+    </div>
+</section> 
+
+<style>
+
+ .animate-breathing {
+    animation: breathing-border 5s ease-in-out infinite; /* Ajusta la duración y la función de temporización */
+  }
+ 
+ @keyframes breathing-border {
+  0% {
+    border-width: 1px;
+    /* border-color: rgba(255, 255, 255, 0.3);  */
+    border-color: oklch(0.852 0.199 91.936 / 0.3);
+    
+  }
+  50% {
+    border-width: 2px;
+    /* border-color: rgba(255, 255, 255, 0.7); */
+    border-color: oklch(0.852 0.199 91.936 / 0.7);
+  }
+  100% {
+    border-width: 1px;
+    /* border-color: rgba(255, 255, 255, 0.3); */
+    border-color: oklch(0.852 0.199 91.936 / 0.3);
+  }
+}
+
+</style>

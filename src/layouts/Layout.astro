@@ -1,0 +1,34 @@
+---
+import './src/styles/global.css';
+import NavButtons from '../components/NavButtons.astro';
+import FloatingDock from '../components/FloatingDock.astro';
+import NavBar from '../components/NavBar.astro';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon-dark.svg" media="(prefers-color-scheme: dark)" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Tresaeme</title>
+	</head>
+	<body>
+		<NavBar />
+		<slot />
+		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"></script>
+	</body>
+</html>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>

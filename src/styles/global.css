@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+
+
+body {
+    font-family: "Montserrat", sans-serif;    
+    background-color: black;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+  }

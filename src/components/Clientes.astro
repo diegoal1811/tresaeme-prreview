@@ -1,0 +1,93 @@
+---
+import img from '../assets/imgs-grid/image.jpg'
+import img1 from '../assets/imgs-grid/image-1.jpg'
+import img2 from '../assets/imgs-grid/image-2.jpg'
+import img3 from '../assets/imgs-grid/image-3.jpg'
+import img4 from '../assets/imgs-grid/image-4.jpg'
+import img5 from '../assets/imgs-grid/image-5.jpg'
+import img6 from '../assets/imgs-grid/image-6.jpg'
+import img7 from '../assets/imgs-grid/image-7.jpg'
+import img8 from '../assets/imgs-grid/image-8.jpg'
+import img9 from '../assets/imgs-grid/image-9.jpg'
+import img10 from '../assets/imgs-grid/image-10.jpg'
+import img11 from '../assets/imgs-grid/image-11.jpg'
+
+import Elipsis from './Elipsis.astro'
+
+const images = [
+    { client: "Cliente 1" , url: img},
+    { client: "Cliente 2" , url: img1},
+    { client: "Cliente 3" , url: img2},
+    { client: "Cliente 4" , url: img3},
+    { client: "Cliente 5" , url: img4},
+    { client: "Cliente 6" , url: img5},
+    { client: "Cliente 7" , url: img6},
+    { client: "Cliente 8" , url: img7},
+    { client: "Cliente 9" , url: img8},
+    { client: "Cliente 10" , url: img9},
+    { client: "Cliente 11" , url: img10},
+    { client: "Cliente 12" , url: img11},
+];
+---
+
+<section id="aliados" class="py-8 px-4 mx-auto max-w-screen-xl lg:py-25 height: 100vh">
+    <div class="mb-15 leading-none tracking-tight text-white" style="text-align: justify;">
+        <h1 class="mb-4 text-4xl md:text-5xl lg:text-5xl font-extrabold">
+            <Elipsis />
+            Marcas con impacto.
+        </h1>
+        <p class="text-2xl">
+            Más que clientes, aliados estrategicos en el crecimiento de tu marca.
+        </p>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+        {images.map(image => (
+            <div class="grid gap-4">
+                <div class="grid-card">
+                    <img class="h-auto max-w-full" src={image.url.src} alt={image.client} />
+                    <div class="overlay">
+                        <p class="overlay-text">{image.client}</p>
+                    </div>
+                </div>
+            </div>
+        ))}
+    </div>
+</section>
+
+<style>
+    .grid-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.5rem;
+    }
+    .grid-card img {
+        transition: transform 0.3s ease;
+        object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+        aspect-ratio: 1/1; /* Fuerza la relación de aspecto 1:1 (cuadrado) */
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .grid-card:hover img {
+        transform: scale(1.1);
+    }
+    .grid-card:hover .overlay {
+        opacity: 1;
+    }
+    .overlay-text {
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+</style>
