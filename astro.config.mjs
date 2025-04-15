@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://diegoal1811.github.io/',
-	base: 'tresaeme-prreview',
+	base: '/tresaeme-prreview/',
   vite: {
     plugins: [tailwindcss()]
   },
